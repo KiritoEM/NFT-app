@@ -8,6 +8,12 @@ const LandingHero = (): JSX.Element => {
     { label: "Explore", class: "btn-explore" },
     { label: "Create", class: "btn-create" },
   ];
+
+  const itemArray = [
+    { label: "Collections", stat: "423K+" },
+    { label: "Artists", stat: "220K+" },
+    { label: "Community", stat: "20K+" },
+  ];
   return (
     <section className="landing-hero">
       <div className="landing-hero__container">
@@ -32,6 +38,14 @@ const LandingHero = (): JSX.Element => {
                     <button className={`btn ${item.class}`}>
                       {item.label}
                     </button>
+                  </div>
+                ))}
+              </div>
+              <div className="statistics">
+                {itemArray.map((item, index) => (
+                  <div className="item" key={index}>
+                    <h5>{item.stat}</h5>
+                    <p>{item.label}</p>
                   </div>
                 ))}
               </div>
