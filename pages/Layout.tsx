@@ -1,11 +1,17 @@
-import { ReactNode } from "react";
+import { Fragment, ReactNode } from "react";
+import Navbar from "@/components/Navbar";
 
 interface Ichildren {
-  children ?: ReactNode;
+  children?: ReactNode;
 }
 
 const Layout: React.FC<Ichildren> = ({ children }): JSX.Element => {
-  return <nav>{children}</nav>;
+  return (
+    <Fragment>
+      <Navbar />
+      {children}
+    </Fragment>
+  );
 };
 
 export default Layout;

@@ -1,5 +1,5 @@
 import MetaHelper from "@/helper/metaHelper";
-import LoginBody from "@/components/LoginBody";
+import LoginBody from "@/components/login/LoginBody";
 import { useAuth } from "@/hooks/useAuth";
 
 const loginPage = (): JSX.Element => {
@@ -13,7 +13,7 @@ const loginPage = (): JSX.Element => {
 
       {/* ===============login body=============== */}
       <main>
-        <LoginBody action={setGooglePopup} />
+        <LoginBody action={()=>{setGooglePopup()}} />
       </main>
     </section>
   );

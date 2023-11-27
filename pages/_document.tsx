@@ -38,7 +38,6 @@ export default function Document() {
           sizes="16x16 32x32 64x64"
         />
 
-        <link rel="apple-touch-icon" href="/logo.webp" sizes="180x180" />
       </Head>
       <body>
         <Main />

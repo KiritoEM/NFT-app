@@ -4,7 +4,6 @@ import { signInWithPopup } from "firebase/auth";
 
 export interface IAuthContext {
   setGooglePopup: () => void;
-  email: string | null;
 }
 
 interface IAuthProvider {
@@ -14,14 +13,21 @@ interface IAuthProvider {
 const AuthContext = createContext<IAuthContext | null>(null);
 
 export const AuthProvider: React.FC<IAuthProvider> = ({ children }) => {
-  const [email, setEmail] = useState<string | null>("");
 
   //show Google popup
   const setGooglePopup = () => {
     signInWithPopup(auth, provider).then((data) => {
-      setEmail(data.user.email);
-      if (email !== null) {
-        localStorage.setItem("userEmail", email);
+      if (data.user.email) {
+        let storage = localStorage.setItem("userEmail", data.user.email);
+      }
+
+      if (Storage){
+        console.log(Storage);
+        console.log("email stocké");
+      }
+
+      else{
+        console.log("email non stocké");
       }
     });
   };
@@ -29,7 +35,6 @@ export const AuthProvider: React.FC<IAuthProvider> = ({ children }) => {
   return (
     <AuthContext.Provider
       value={{
-        email,
         setGooglePopup,
       }}
     >

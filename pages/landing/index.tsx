@@ -1,11 +1,13 @@
-import React from 'react';
+import Layout from "../Layout";
+import MetaHelper from "@/helper/metaHelper";
 
 const landing = () => {
-    return (
-        <div>
-            Landing Page
-        </div>
-    );
+  return (
+    <Layout>
+        <MetaHelper title="Bienvenue sur NFT-app"/>
+      <section className="landing-page"></section>
+    </Layout>
+  );
 };
 
 export default landing;
