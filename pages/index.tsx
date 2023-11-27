@@ -1,7 +1,11 @@
 import MetaHelper from "@/helper/metaHelper";
 import LoginBody from "@/components/LoginBody";
+import { useAuth } from "@/hooks/useAuth";
 
 const loginPage = (): JSX.Element => {
+  //import function for google signup with firebase
+  const { setGooglePopup } = useAuth();
+
   return (
     <section className="login-page">
       {/* ===============Meta title page=============== */}
@@ -9,7 +13,7 @@ const loginPage = (): JSX.Element => {
 
       {/* ===============login body=============== */}
       <main>
-        <LoginBody />
+        <LoginBody action={setGooglePopup} />
       </main>
     </section>
   );

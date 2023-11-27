@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 interface Ichildren {
-  children: ReactNode;
+  children ?: ReactNode;
 }
 
 const Layout: React.FC<Ichildren> = ({ children }): JSX.Element => {

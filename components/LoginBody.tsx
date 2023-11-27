@@ -1,4 +1,8 @@
-const LoginBody = () : JSX.Element => {
+interface Iaction {
+  action: () => void;
+}
+
+const LoginBody: React.FC<Iaction> = ({ action }): JSX.Element => {
   return (
     <div className="login-page__container">
       <div className="img-head">
@@ -11,12 +15,10 @@ const LoginBody = () : JSX.Element => {
       </div>
 
       <div className="google-button text-center mt-5">
-        <form action="">
-          <button className="btn" type="submit">
-            <img src="/icons8-google.png" alt="" className="mx-2" /> Se
-            connecter avec Google
-          </button>
-        </form>
+        <button className="btn" onClick={action}>
+          <img src="/icons8-google.png" alt="" className="mx-2" /> Se connecter
+          avec Google
+        </button>
       </div>
     </div>
   );
