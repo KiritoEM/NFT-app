@@ -1,4 +1,9 @@
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import dataHelper from "@/helper/dataHelper";
+
 const LandingHero = (): JSX.Element => {
+  const { landingHeroHelper } = dataHelper();
   const buttonArray = [
     { label: "Explore", class: "btn-explore" },
     { label: "Create", class: "btn-create" },
@@ -6,9 +11,9 @@ const LandingHero = (): JSX.Element => {
   return (
     <section className="landing-hero">
       <div className="landing-hero__container">
-        <div className="row">
+        <div className="row gx-5">
           <div className="col-6">
-            <div className="section-introduction">
+            <div className="section-header">
               <div className="title">
                 <h1>
                   Discover , collect and Sell <span>extraordinary NFTs</span>
@@ -24,14 +29,41 @@ const LandingHero = (): JSX.Element => {
               <div className="button d-flex">
                 {buttonArray.map((item, index) => (
                   <div key={index}>
-                    <button className={`btn ${item.class}`}>{item.label}</button>
+                    <button className={`btn ${item.class}`}>
+                      {item.label}
+                    </button>
                   </div>
                 ))}
               </div>
             </div>
           </div>
           <div className="col-6">
-            <div className="section-pictures"></div>
+            <div className="section-cover">
+              <div className="row">
+                {landingHeroHelper.map((item, index) => (
+                  <div className="col-6" key={index}>
+                    <div className="card">
+                      <div className="card__cover">
+                        <img src={item.img} alt="" />
+                      </div>
+                      <div className="card__content">
+                        <h5>{item.header_title}</h5>
+                        <p>{item.subtitle}</p>
+                        <div className="card__items d-flex">
+                          <div className="text">{item.ETH}</div>
+                          <div className="heart">
+                            <p>
+                              {" "}
+                              <FontAwesomeIcon icon={faHeart} /> 255
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
