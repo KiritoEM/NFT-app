@@ -4,8 +4,8 @@ interface Ichildren {
   children: ReactNode;
 }
 
-const NavLayout: React.FC<Ichildren> = ({ children }): JSX.Element => {
+const Layout: React.FC<Ichildren> = ({ children }): JSX.Element => {
   return <nav>{children}</nav>;
 };
 
-export default NavLayout;
+export default Layout;
