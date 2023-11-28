@@ -3,14 +3,14 @@ import SwiperWithoutSwip from "@/components/childrenComponents/SwiperWithoutSwip
 
 interface IbuttonNavigation {
   value: string;
-  active ?: string
+  active?: string;
 }
 
 const TopCollection = (): JSX.Element => {
   const { TopCollection } = dataHelper();
 
   const buttonNavigation: IbuttonNavigation[] = [
-    { value: "Art" , active: "active"},
+    { value: "Art", active: "active" },
     { value: "Comestibles" },
     { value: "Metaverse" },
     { value: "Virtual Words" },
@@ -29,7 +29,9 @@ const TopCollection = (): JSX.Element => {
           <div className="navigation">
             {buttonNavigation.map((item, index) => (
               <div key={index}>
-                <button className="btn" id={item.active}>{item.value}</button>
+                <button className="btn" id={item.active}>
+                  {item.value}
+                </button>
               </div>
             ))}
           </div>
@@ -42,6 +44,10 @@ const TopCollection = (): JSX.Element => {
                 <SwiperWithoutSwip {...item} />
               </div>
             ))}
+          </div>
+
+          <div className="btn-more">
+            <button className="btn">See more</button>
           </div>
         </div>
       </div>

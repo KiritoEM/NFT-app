@@ -9,7 +9,7 @@ const loginPage = (): JSX.Element => {
   return (
     <section className="login-page">
       {/* ===============Meta title page=============== */}
-      <MetaHelper title="Connectez-vous avec votra compte google" />
+      <MetaHelper title="Sign-in with your Google Account" />
 
       {/* ===============login body=============== */}
       <main>
