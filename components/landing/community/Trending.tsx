@@ -11,8 +11,10 @@ import { MutableRefObject, useRef } from "react";
 
 const Trending = (): JSX.Element => {
   const { landingTreding } = dataHelper();
-  // const swiper = useSwiper();
+
+  //fetch swiper reference
   const swiperRef: MutableRefObject<any> = useRef(null);
+  
 
   const prevSwiper = () => {
     swiperRef.current.slidePrev();
@@ -26,7 +28,7 @@ const Trending = (): JSX.Element => {
     <section className="trending">
       <div className="trending__container">
         <div className="section-header">
-          <h2>Trending NTFs</h2>
+          <h2>Trending <span>NTFs</span></h2>
         </div>
         <div className="section-content">
           <article className="swiper-container">

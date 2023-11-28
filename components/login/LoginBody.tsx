@@ -1,6 +1,6 @@
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 let email: string | null;
 
 interface Iaction {
@@ -8,7 +8,7 @@ interface Iaction {
 }
 
 const LoginBody: React.FC<Iaction> = ({ action }): JSX.Element => {
-  const { emailSent, setGooglePopup } = useAuth();
+  const { emailSent } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
