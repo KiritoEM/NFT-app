@@ -1,0 +1,28 @@
+.swiper-button {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+    position: relative;
+    top: -16rem;
+    z-index: 20;
+
+    .btn {
+        color: $bg-color;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 14px;
+        padding-left: 13px;
+        padding-right: 13px;
+        border-radius: 50%;
+        font-weight: bold;
+        background-color: #fff;
+    }
+}
+
+a{
+    text-decoration: none;
+}
