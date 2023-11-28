@@ -1,9 +1,13 @@
 import React, { ReactNode, createContext, useContext, useState } from "react";
 import { auth, provider } from "./../firebase/firebase-config";
-import { signInWithPopup } from "firebase/auth";
+import { signInWithPopup, signOut } from "firebase/auth";
+import { useRouter } from "next/router";
 
 export interface IAuthContext {
   setGooglePopup: () => void;
+  setLogout: () => void;
+  emailSent: string | null;
+  setEmailValue: (email: string | null) => void;
 }
 
 interface IAuthProvider {
@@ -13,29 +17,42 @@ interface IAuthProvider {
 const AuthContext = createContext<IAuthContext | null>(null);
 
 export const AuthProvider: React.FC<IAuthProvider> = ({ children }) => {
+  const router= useRouter
+  const [emailSent, sentEmail] = useState<string | null>("");
 
+  
   //show Google popup
   const setGooglePopup = () => {
     signInWithPopup(auth, provider).then((data) => {
       if (data.user.email) {
         let storage = localStorage.setItem("userEmail", data.user.email);
+        sentEmail(data.user.email);
       }
+    });
+  };
 
-      if (Storage){
-        console.log(Storage);
-        console.log("email stocké");
-      }
+  const setEmailValue = (email: string | null) => {
+    if (typeof window !== "undefined") {
+      sentEmail(email);
+    }
 
-      else{
-        console.log("email non stocké");
-      }
+    return email;
+  };
+
+  const setLogout = () => {
+    signOut(auth).then(() => {
+      localStorage.removeItem("userEmail");
+
     });
   };
 
   return (
     <AuthContext.Provider
       value={{
+        emailSent,
         setGooglePopup,
+        setLogout,
+        setEmailValue,
       }}
     >
       {children}

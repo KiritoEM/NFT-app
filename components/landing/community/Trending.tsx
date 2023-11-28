@@ -2,8 +2,6 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dataHelper from "@/helper/dataHelper";
 import SwiperCard from "@/components/childrenComponenets/SwiperCard";
 
@@ -18,13 +16,12 @@ const Trending = (): JSX.Element => {
         <div className="section-content">
           <article className="swiper-container">
             <Swiper
-              slidesPerView={4}
-              spaceBetween={20}
-              pagination={{
-                clickable: true,
-              }}
-              keyboard={true}
-              className="mySwiper"
+             slidesPerView={4}
+             spaceBetween={20}
+             pagination={{
+               clickable: true,
+             }}
+             className="mySwiper"
             >
               {landingTreding.map((item, index) => (
                 <SwiperSlide>

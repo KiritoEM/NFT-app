@@ -1,17 +1,22 @@
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/router";
-let email : string | null;
-
-if (typeof window !== "undefined") {
-   email = localStorage.getItem("userEmail");
-}
+import { useEffect, useState } from "react";
+let email: string | null;
 
 interface Iaction {
   action: () => void;
 }
 
 const LoginBody: React.FC<Iaction> = ({ action }): JSX.Element => {
-  const router = useRouter()
+  const { emailSent, setGooglePopup } = useAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (emailSent) {
+      router.push("/landing");
+    }
+  }, [emailSent]);
+
   return (
     <div className="login-page__container">
       <div className="img-head">
@@ -27,8 +32,9 @@ const LoginBody: React.FC<Iaction> = ({ action }): JSX.Element => {
         <button
           className="btn"
           onClick={() => {
-            email ? "" : action();
-            email ? router.push("/landing") : ""
+            if (!emailSent) {
+              action();
+            }
           }}
         >
           <img src="/icons8-google.png" alt="" className="mx-2" /> Se connecter
