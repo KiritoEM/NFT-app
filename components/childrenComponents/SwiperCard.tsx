@@ -24,7 +24,7 @@ const SwiperCard = (props: ITrendingProps): JSX.Element => {
   } = props;
 
   return (
-    <div className="box">
+    <article className="box">
       <div className="box__cover">
         <img src={cover} alt="" />
       </div>
@@ -50,7 +50,7 @@ const SwiperCard = (props: ITrendingProps): JSX.Element => {
           <button className="btn">Collect Now</button>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

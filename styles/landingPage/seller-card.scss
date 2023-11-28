@@ -1,0 +1,52 @@
+.card-seller{
+    width: 100%;
+    height: 100%;
+
+     &__img{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+         img{
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 27px;
+         }
+
+         .badge{
+            position: relative;
+            top: -23px;
+            left: 9px;
+            width: 120px;
+            display: flex;
+            justify-content: flex-end;
+
+             .icon{
+                padding: 7px;
+                background-color: $green;
+                border-radius: 50%;
+                font-size: 16px;
+             }
+         }
+     }
+
+     &__content{
+        margin-top: -5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+         h5{
+            font-weight: bold;
+            color: #fff;
+         }
+
+         p{
+            color: #727171;
+            font-weight: bold;
+         }
+     }
+}

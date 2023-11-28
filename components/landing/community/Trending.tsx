@@ -28,7 +28,7 @@ const Trending = (): JSX.Element => {
     <section className="trending">
       <div className="trending__container">
         <div className="section-header">
-          <h2>Trending <span>NTFs</span></h2>
+          <h3>Trending <span>NTFs</span></h3>
         </div>
         <div className="section-content">
           <article className="swiper-container">

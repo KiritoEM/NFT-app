@@ -22,9 +22,9 @@ const TopCollection = (): JSX.Element => {
     <section className="landing-top">
       <div className="landing-top__container">
         <div className="section-header">
-          <h2>
+          <h3>
             Top <span>Collection</span>
-          </h2>
+          </h3>
 
           <div className="navigation">
             {buttonNavigation.map((item, index) => (

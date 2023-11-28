@@ -17,7 +17,7 @@ const SwiperWithoutSwip = (props: ITrendingProps): JSX.Element => {
     props;
 
   return (
-    <div className="box-top">
+    <article className="box-top">
       <div className="box-top__cover">
         <img src={cover} alt="" />
       </div>
@@ -39,7 +39,7 @@ const SwiperWithoutSwip = (props: ITrendingProps): JSX.Element => {
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

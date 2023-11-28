@@ -1,0 +1,27 @@
+.landing-topseller {
+    width: 100%;
+    overflow: hidden;
+
+    &__container {
+        padding: 2rem 56px 2.5rem 56px;
+        width: 100%;
+
+        .section-header {
+
+            h3 {
+                color: #fff;
+                font-weight: bold;
+                text-align: start;
+
+                span {
+                    color: $green;
+                }
+            }
+        }
+
+        .section-content{
+            width: 100%;
+            margin-top: 2.5rem;
+        }
+    }
+}

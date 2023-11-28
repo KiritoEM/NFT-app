@@ -21,9 +21,9 @@ const LandingHero = (): JSX.Element => {
           <div className="col-6">
             <div className="section-header">
               <div className="title">
-                <h1>
+                <h2>
                   Discover , collect and Sell <span>extraordinary NFTs</span>
-                </h1>
+                </h2>
               </div>
               <div className="subtitle mt-3">
                 <p>

@@ -15,6 +15,22 @@ interface IlandingHero {
   img: string;
 }
 
+interface INFTcard {
+  cover: string;
+  userImage: string;
+  userName: string;
+  title: string;
+  subtitle: string;
+  ethValue: string;
+  heartCount: number;
+}
+
+interface IcreateSection {
+  img: string;
+  title: string;
+  subtitle: string;
+}
+
 export default function dataHelper() {
   const navItems: InavHelper = {
     logo: "/logo.png",
@@ -40,7 +56,7 @@ export default function dataHelper() {
     },
   ];
 
-  const landingTreding = [
+  const landingTreding: INFTcard[] = [
     {
       cover: "/trending1.png",
       userImage: "/img-2.png",
@@ -97,7 +113,7 @@ export default function dataHelper() {
     },
   ];
 
-  const TopCollection = [
+  const TopCollection: INFTcard[] = [
     {
       cover: "/trending1.png",
       userImage: "/img-2.png",
@@ -154,5 +170,42 @@ export default function dataHelper() {
     },
   ];
 
-  return { navItems, landingHeroHelper, landingTreding, TopCollection };
+  const sectionCreate: IcreateSection[] = [
+    {
+      img: "/Wallet.png",
+      title: "Set up your wallet",
+      subtitle:
+        "Once you’ve set up your wallet of choice, connect it to OpenSea by clicking the wallet icon in the top right corner. Learn about the wallets we support.",
+    },
+    {
+      img: "/Paper-Upload.png",
+      title: "Upload & Create Collection",
+      subtitle:
+        "Upload your work then Click My Collections and set up your collection. Add social links, a description, profile & banner images, and set a secondary sales fee.",
+    },
+    {
+      img: "/Bookmark.png",
+      title: "List them for sale",
+      subtitle:
+        "Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs, and we help you sell them",
+    },
+  ];
+
+  const sellerInfo = [
+    {img: "/avt-3.jpg", name: "Crispin Bery", ETH:"214.2 ETH"},
+    {img: "/avt-2.jpg", name: "Samson Frost", ETH:"205.2 ETH"},
+    {img: "/avt-4.jpg", name: "Tommy Alvarest", ETH:"170.5 ETH"},
+    {img: "/avt-5.jpg", name: "Windsor Lane", ETH:"120.2 ETH"},
+    {img: "/avt-6.jpg", name: "Andy Hulbutt", ETH:"85.7 ETH"},
+    {img: "/avt-8.jpg", name: "Blake Blanks", ETH:"68.2 ETH"},
+  ]
+
+  return {
+    navItems,
+    landingHeroHelper,
+    landingTreding,
+    TopCollection,
+    sectionCreate,
+    sellerInfo
+  };
 }

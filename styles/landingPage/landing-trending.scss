@@ -1,16 +1,14 @@
 .trending {
     width: 100%;
     overflow: hidden;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
 
     &__container {
-        padding: 0 56px 0 56px;
+        padding: 1.5rem 56px 1.5rem 56px;
 
         .section-header {
             text-align: center;
 
-            h2 {
+            h3 {
                 color: #fff;
                 font-weight: bold;
             }
