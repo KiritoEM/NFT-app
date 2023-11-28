@@ -1,3 +1,8 @@
+interface Ilogo {
+  img: string;
+  logo_title: string;
+}
+
 interface InavHelper {
   logo: string;
   menu_item: InavItems[];
@@ -31,9 +36,38 @@ interface IcreateSection {
   subtitle: string;
 }
 
+interface IsellerInfo {
+  img: string;
+  name: string;
+  ETH: string;
+}
+
+interface IfooterData{
+  icons: IiconsFooter[];
+  marketPlace: ImarketLabel[];
+  links: Ilinks[];
+}
+
+interface IiconsFooter{
+  src: string
+}
+
+interface ImarketLabel{
+  label :string
+}
+
+interface Ilinks{
+  label :string
+}
+
 export default function dataHelper() {
+  const logo: Ilogo = {
+    img: "/logo.png",
+    logo_title: "NFT-app",
+  };
+
   const navItems: InavHelper = {
-    logo: "/logo.png",
+    logo: "",
     menu_item: [
       { label: "Home" },
       { label: "Collection" },
@@ -191,21 +225,44 @@ export default function dataHelper() {
     },
   ];
 
-  const sellerInfo = [
-    {img: "/avt-3.jpg", name: "Crispin Bery", ETH:"214.2 ETH"},
-    {img: "/avt-2.jpg", name: "Samson Frost", ETH:"205.2 ETH"},
-    {img: "/avt-4.jpg", name: "Tommy Alvarest", ETH:"170.5 ETH"},
-    {img: "/avt-5.jpg", name: "Windsor Lane", ETH:"120.2 ETH"},
-    {img: "/avt-9.jpg", name: "Andy Hulbutt", ETH:"85.7 ETH"},
-    {img: "/avt-8.jpg", name: "Blake Blanks", ETH:"68.2 ETH"},
-  ]
+  const sellerInfo :IsellerInfo[] = [
+    { img: "/avt-3.jpg", name: "Crispin Bery", ETH: "214.2 ETH" },
+    { img: "/avt-2.jpg", name: "Samson Frost", ETH: "205.2 ETH" },
+    { img: "/avt-4.jpg", name: "Tommy Alvarest", ETH: "170.5 ETH" },
+    { img: "/avt-5.jpg", name: "Windsor Lane", ETH: "120.2 ETH" },
+    { img: "/avt-9.jpg", name: "Andy Hulbutt", ETH: "85.7 ETH" },
+    { img: "/avt-8.jpg", name: "Blake Blanks", ETH: "68.2 ETH" },
+  ];
+
+  const footerData :IfooterData = {
+    icons:[
+     {src:"/icon-1.png"},
+     {src:"/icon-2.png"},
+     {src:"/icon-3.png"},
+     {src:"/icon-4.png"},
+    ],
+    links:[
+      {label :"Explore"},
+      {label :"Articles"},
+      {label :"How it works"},
+      {label :"Help"},
+    ],
+    marketPlace:[
+      {label :"Explore"},
+      {label :"Articles"},
+      {label :"How it works"},
+      {label :"Help"},
+    ]
+  }
 
   return {
+    logo,
     navItems,
     landingHeroHelper,
     landingTreding,
     TopCollection,
     sectionCreate,
-    sellerInfo
+    sellerInfo,
+    footerData
   };
 }

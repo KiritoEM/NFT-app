@@ -1,6 +1,5 @@
 .landing-footer {
     width: 100%;
-    height: 40vh;
     margin-top: 2rem;
     background-color: $dark-grey;
 
@@ -53,6 +52,96 @@
                 }
             }
 
+        }
+
+        .line-separation {
+            height: 1px;
+            width: 94%;
+            margin: auto;
+            margin-top: 3.7rem;
+            background-color: #FFFFFF;
+        }
+
+        .footer-secondary {
+            margin-top: 3rem;
+            padding-left: 45px;
+            padding-right: 45px;
+
+            .section-appInfo {
+
+                .logo {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    height: 100%;
+                    align-items: center;
+
+                    img {
+                        width: 48px;
+                        margin-top: -4px;
+                    }
+
+                    h5 {
+                        color: #fff;
+                        font-weight: bold;
+                        margin-left: 10px;
+                    }
+                }
+
+                .text {
+                    margin-top: 15px;
+
+                    p {
+                        color: #fff;
+                    }
+                }
+
+                .icons {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 25px;
+                    margin-top: 1.8rem;
+
+                    img {
+                        width: 26px;
+                    }
+                }
+            }
+
+            .section-marketPlace {
+
+                h4 {
+                    color: #fff;
+                    font-weight: bold;
+                }
+
+                .items {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 1.6rem;
+
+                    p {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .section-links {
+                h4 {
+                    color: #fff;
+                    font-weight: bold;
+                }
+
+                .items {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 1.6rem;
+
+                    p {
+                        color: #fff;
+                    }
+                }
+            }
         }
     }
 }
