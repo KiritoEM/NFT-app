@@ -5,17 +5,23 @@ import Trending from "@/components/landing/community/Trending";
 import TopCollection from "@/components/landing/top/TopCollection";
 import Creation from "@/components/landing/creation/Creation";
 import TopSeller from "@/components/landing/TopSeller/TopSeller";
+import LandingFooter from "@/components/landing/footer/LandingFooter";
 
 const landing = (): JSX.Element => {
   return (
     <Layout>
       <MetaHelper title="Welcome to NFT-app" />
       <section className="landing-page">
-        <LandingHero />
-        <Trending />
-        <TopCollection />
-        <Creation />
-        <TopSeller />
+        <main id="landing-body">
+          <LandingHero />
+          <Trending />
+          <TopCollection />
+          <Creation />
+          <TopSeller />
+        </main>
+        <footer id="landing-footer">
+          <LandingFooter />
+        </footer>
       </section>
     </Layout>
   );

@@ -196,7 +196,7 @@ export default function dataHelper() {
     {img: "/avt-2.jpg", name: "Samson Frost", ETH:"205.2 ETH"},
     {img: "/avt-4.jpg", name: "Tommy Alvarest", ETH:"170.5 ETH"},
     {img: "/avt-5.jpg", name: "Windsor Lane", ETH:"120.2 ETH"},
-    {img: "/avt-6.jpg", name: "Andy Hulbutt", ETH:"85.7 ETH"},
+    {img: "/avt-9.jpg", name: "Andy Hulbutt", ETH:"85.7 ETH"},
     {img: "/avt-8.jpg", name: "Blake Blanks", ETH:"68.2 ETH"},
   ]
 

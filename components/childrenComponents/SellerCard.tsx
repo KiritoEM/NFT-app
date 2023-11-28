@@ -11,7 +11,7 @@ interface IsellerProps {
 const SellerCard: React.FC<IsellerProps> = ({ img, name, ETH }) => {
   return (
     <div className="card-seller">
-      <div className="card-seller__img">
+      <div className="card-seller__avatar">
         <img src={img} alt="" />
         <div className="badge">
           <FontAwesomeIcon icon={faCheck} className="icon" />
