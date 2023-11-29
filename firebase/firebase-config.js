@@ -3,7 +3,7 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAUT2wah5gf0hw27AkYpzpP2THoge_0huU",
-  authDomain: "ntf-app-d45a3.firebaseapp.com",
+  authDomain: "https://nft-app-topaz.vercel.app",
   projectId: "ntf-app-d45a3",
   storageBucket: "ntf-app-d45a3.appspot.com",
   messagingSenderId: "124789879568",

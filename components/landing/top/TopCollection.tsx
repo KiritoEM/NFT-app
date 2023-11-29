@@ -1,6 +1,6 @@
 import dataHelper from "@/helper/dataHelper";
 import SwiperWithoutSwip from "@/components/childrenComponents/SwiperWithoutSwip";
-import Fade from "react-reveal/Fade";
+import Flip from "react-reveal/Flip";
 
 interface IbuttonNavigation {
   value: string;
@@ -20,8 +20,8 @@ const TopCollection = (): JSX.Element => {
 
   return (
     <section className="landing-top">
-      <Fade bottom cascade>
-        <div className="landing-top__container">
+      <div className="landing-top__container">
+        <Flip bottom>
           <div className="section-header">
             <h3>
               Top <span>Collection</span>
@@ -37,7 +37,9 @@ const TopCollection = (): JSX.Element => {
               ))}
             </div>
           </div>
+        </Flip>
 
+        <Flip bottom>
           <div className="section-content">
             <div className="row gx-4 gy-4">
               {TopCollection.map((item, index) => (
@@ -51,8 +53,8 @@ const TopCollection = (): JSX.Element => {
               <button className="btn">See more</button>
             </div>
           </div>
-        </div>
-      </Fade>
+        </Flip>
+      </div>
     </section>
   );
 };
