@@ -14,7 +14,7 @@ const Creation = (): JSX.Element => {
           </div>
 
           <div className="section-content">
-            <div className="row gx-5">
+            <div className="row gx-5 gy-5 gy-md-2">
               {sectionCreate.map((item, index) => (
                 <CardCreate key={index} {...item} />
               ))}

@@ -10,9 +10,9 @@ const TopSeller = (): JSX.Element => {
           <h3>Top seller</h3>
         </div>
         <div className="section-content">
-          <div className="row">
+          <div className="row gx-5 gx-md-2">
             {sellerInfo.map((item, index) => (
-              <div className="col-2" key={index}>
+              <div className="col-5 col-md-2" key={index}>
                 <SellerCard {...item} />
               </div>
             ))}

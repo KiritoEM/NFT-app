@@ -10,7 +10,7 @@ const CardCreate: React.FC<IcardProps> = ({
   subtitle,
 }): JSX.Element => {
   return (
-    <div className="col-4">
+    <div className="col-md-4">
       <article className="card-create">
         <div className="card-create__img">
           <img src={img} alt="" />

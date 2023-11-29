@@ -4,11 +4,20 @@
     overflow: hidden;
     margin-top: 3.5rem;
 
+    @include screen(small) {
+        height: max-content;
+    }
+
     &__container {
-        padding: 0 56px 0 56px;
+        padding: 0 6% 0 6%;
         width: 100%;
         height: 100%;
         display: flex;
+
+        @include screen(small) {
+            padding: 0 5% 0 5%;
+            margin-top: 4rem;
+        }
 
         .section-header {
             height: 106%;
@@ -17,14 +26,23 @@
             flex-direction: column;
             justify-content: center;
 
+            @include screen(small) {
+                max-width: 100%;
+            }
+
             .title {
                 h2 {
                     color: #fff;
                     font-weight: bold;
                     font-size: 3em;
 
-                    span{
+                    span {
                         color: $green;
+                    }
+
+                    @include screen(small) {
+                        font-size: 31px;
+                        white-space: wrap;
                     }
                 }
             }
@@ -32,6 +50,10 @@
             .subtitle {
                 p {
                     color: #fff;
+
+                    @include screen(small) {
+                        max-width: 90%;
+                    }
                 }
             }
 
@@ -45,6 +67,14 @@
                     padding-right: 60px;
                     border-radius: 21px;
                     font-size: 15px;
+
+                    @include screen(small) {
+                        padding: 8px;
+                        width: 100%;
+                        padding-left: 46px;
+                        padding-right: 46px;
+                        white-space: wrap;
+                    }
                 }
 
                 .btn-explore {
@@ -60,25 +90,30 @@
                 }
             }
 
-            .statistics{
+            .statistics {
                 margin-top: 3rem;
                 display: flex;
                 flex-direction: row;
                 width: 65%;
                 justify-content: space-between;
 
-                 div{
-                    h5{
+                @include screen(small) {
+                    width: 100%;
+                    margin-top: 2rem;
+                }
+
+                div {
+                    h5 {
                         color: $yellow;
                         font-weight: bold;
                     }
 
-                    p{
+                    p {
                         color: #fff;
                     }
-                 }
+                }
 
-                  
+
             }
         }
 
@@ -89,59 +124,59 @@
             flex-direction: column;
             justify-content: center;
 
-            .card{
-                 width: 100%;
-                 height: 100%;
-                 background-color: $dark-grey;
-                 border-radius: 13px;
+            .card {
+                width: 100%;
+                height: 100%;
+                background-color: $dark-grey;
+                border-radius: 13px;
 
-                  &__cover{
+                &__cover {
                     width: 100%;
                     height: 15rem;
                     padding: 12px;
 
-                     img{
+                    img {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
                         border-radius: 7px;
-                     }
-                  }
+                    }
+                }
 
-                  &__content{
+                &__content {
                     margin-top: -6px;
                     padding-bottom: 27px;
                     padding-top: 27px;
                     padding: 20px;
 
-                     h5{
+                    h5 {
                         color: #fff;
                         font-weight: bold;
-                     }
+                    }
 
-                     p{
+                    p {
                         color: #fff;
-                     }
+                    }
 
-                     .card__items{
+                    .card__items {
                         width: 100%;
                         justify-content: space-between;
 
-                          .text{
+                        .text {
                             color: $yellow;
                             font-weight: bold;
-                          }
+                        }
 
-                          .heart{
+                        .heart {
                             display: flex;
                             flex-direction: row;
 
-                            p{
+                            p {
                                 color: #948f8f;
                             }
-                          }
-                     }
-                  }
+                        }
+                    }
+                }
             }
         }
     }

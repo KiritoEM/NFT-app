@@ -15,7 +15,6 @@ const TopCollection = (): JSX.Element => {
     { value: "Metaverse" },
     { value: "Virtual Words" },
     { value: "Sports" },
-    { value: "Music" },
   ];
 
   return (
@@ -40,7 +39,7 @@ const TopCollection = (): JSX.Element => {
         <div className="section-content">
           <div className="row gx-4 gy-4">
             {TopCollection.map((item, index) => (
-              <div className="col-3">
+              <div className="col-md-3">
                 <SwiperWithoutSwip {...item} />
               </div>
             ))}

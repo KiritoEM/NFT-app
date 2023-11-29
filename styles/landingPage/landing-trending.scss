@@ -2,8 +2,16 @@
     width: 100%;
     overflow: hidden;
 
+    @include screen(small) {
+        margin-top: 2rem;
+    }
+
     &__container {
-        padding: 1.5rem 56px 1.5rem 56px;
+        padding: 1.5rem 6% 1.5rem 6%;
+
+        @include screen(small) {
+            padding: 1.5rem 5% 1.5rem 5%;
+        }
 
         .section-header {
             text-align: center;
@@ -29,6 +37,10 @@
                     width: 26%;
                     height: 100%;
                     cursor: pointer;
+
+                    @include screen(small) {
+                        width: 100%;
+                    }
                 }
             }
         }
