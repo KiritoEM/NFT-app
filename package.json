@@ -17,6 +17,8 @@
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-reveal": "^1.2.2",
+    "react-use": "^17.4.1",
     "sass": "^1.69.5",
     "swiper": "^11.0.5"
   },
