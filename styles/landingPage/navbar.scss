@@ -85,19 +85,38 @@
      }
 }
 
+.openNav{
+    height: max-content;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    transition: 0.15s ease-out;
+}
+
+.closeNav{
+    height: 0;
+    padding: 0;
+    transition: 0.15s ease-in;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.788);
+}
+
 
 .navbar-toogle{
     position: fixed;
+    overflow: hidden;
     top: 4rem;
-    height: max-content;
     width: 100%;
     background-color: $bg-color;
-    padding: 0;
-    margin-top: 5px;
     display: flex;
     z-index: 50;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
 
     ul {
         display: flex;
