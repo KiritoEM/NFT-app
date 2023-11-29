@@ -17,8 +17,8 @@ const LandingHero = (): JSX.Element => {
   return (
     <section className="landing-hero">
       <div className="landing-hero__container">
-        <div className="row gx-0 gx-md-5 gy-5 gy-md-2">
-          <div className="col-md-6">
+        <div className="row gx-0 gx-md-5 gy-5 gy-lg-2">
+          <div className="col-lg-6">
             <div className="section-header">
               <div className="title">
                 <h2>
@@ -51,7 +51,7 @@ const LandingHero = (): JSX.Element => {
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-12 col-lg-6">
             <div className="section-cover">
               <div className="row gy-4 gy-md-2">
                 {landingHeroHelper.map((item, index) => (

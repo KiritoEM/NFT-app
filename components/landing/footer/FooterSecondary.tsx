@@ -6,8 +6,8 @@ const FooterSecondary = (): JSX.Element => {
 
   return (
     <section className="footer-secondary">
-      <div className="row gx-5 gy-5 gy-md-2">
-        <div className="col-md-4">
+      <div className="row gx-5 gy-5 gy-lg-2">
+        <div className="col-md-6 col-lg-4">
           <div className="section-appInfo">
             <div className="logo">
               <img src={logo.img} alt="" />
@@ -29,7 +29,7 @@ const FooterSecondary = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-6 col-lg-4">
           <div className="section-marketPlace">
             <h4>Marketplace</h4>
             <div className="items">
@@ -39,7 +39,7 @@ const FooterSecondary = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-6 col-lg-4">
           <div className="section-links">
             <h4>Links</h4>
             <div className="items">

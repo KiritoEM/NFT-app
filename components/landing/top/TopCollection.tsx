@@ -39,7 +39,7 @@ const TopCollection = (): JSX.Element => {
         <div className="section-content">
           <div className="row gx-4 gy-4">
             {TopCollection.map((item, index) => (
-              <div className="col-md-3">
+              <div className="col-md-4 col-lg-3">
                 <SwiperWithoutSwip {...item} />
               </div>
             ))}
