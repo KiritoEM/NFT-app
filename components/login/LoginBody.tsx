@@ -1,7 +1,6 @@
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-let email: string | null;
 
 interface Iaction {
   action: () => void;
@@ -37,8 +36,8 @@ const LoginBody: React.FC<Iaction> = ({ action }): JSX.Element => {
             }
           }}
         >
-          <img src="/icons8-google.png" alt="" className="mx-2" />Continuer
-          avec Google
+          <img src="/icons8-google.png" alt="" className="mx-2" />
+          Continuer avec Google
         </button>
       </div>
     </div>

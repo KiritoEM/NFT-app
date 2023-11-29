@@ -4,6 +4,7 @@ import AppProvider from "@/Provider/AppProvider";
 import AppRoutes from "@/routes/AppRoutes";
 
 export default function App({ Component, pageProps }: AppProps) {
+  
   return (
     <AppRoutes>
       <AppProvider>
