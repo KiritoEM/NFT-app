@@ -37,7 +37,7 @@ const LoginBody: React.FC<Iaction> = ({ action }): JSX.Element => {
             }
           }}
         >
-          <img src="/icons8-google.png" alt="" className="mx-2" /> Se connecter
+          <img src="/icons8-google.png" alt="" className="mx-2" />Continuer
           avec Google
         </button>
       </div>

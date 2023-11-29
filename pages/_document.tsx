@@ -33,7 +33,7 @@ export default function Document() {
 
         <link
           rel="icon"
-          href="/image 1.png"
+          href="/logo.png"
           type="image/png"
           sizes="16x16 32x32 64x64"
         />

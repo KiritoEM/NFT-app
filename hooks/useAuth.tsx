@@ -42,7 +42,6 @@ export const AuthProvider: React.FC<IAuthProvider> = ({ children }) => {
   const setLogout = () => {
     signOut(auth).then(() => {
       localStorage.removeItem("userEmail");
-
     });
   };
 

@@ -1,20 +1,32 @@
     .login-page {
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         background-color: $bg-color;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+
+        @include screen(small) {
+            align-items: normal;
+        }
 
         &__container {
-            width: 100%;
+            width: auto;
             height: 100%;
             padding: 34px;
             padding-left: 60px;
             padding-right: 60px;
             background-color: $dark-grey;
             border-radius: 8px;
+
+            @include screen(small) {
+                padding-left: 11px;
+                padding-right: 11px;
+                width: 90%;
+                margin: 0 auto;
+            }
+
 
             .img-head {
                 padding: 0;
@@ -28,34 +40,58 @@
                 img {
                     width: 145px;
                     object-fit: cover;
+
+                    @include screen(small) {
+                        width: 120px;
+                    }
                 }
             }
 
             .title {
                 margin-top: -20px;
+                text-align: center;
 
                 h4 {
                     color: #fff;
                     font-weight: bold;
 
-                     span{
+                    span {
                         color: $green;
-                     }
+                    }
+
+                    @include screen(small) {
+                        font-size: 19px;
+                    }
+
                 }
             }
 
-            .google-button{
+            .google-button {
 
-                 button{
-                     font-size: 16px;
-                     padding: 12px;
-                     padding-left: 30px;
-                     padding-right: 30px;
-                     background-color: #fff;
-                     border: 0;
-                     border-radius: 10px;
-                     font-weight: bold;
-                 }
+                button {
+                    font-size: 16px;
+                    padding: 12px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    background-color: #fff;
+                    border: 0;
+                    border-radius: 10px;
+                    font-weight: bold;
+
+                    img{
+                        @include screen(small) {
+                            width: 25px;
+                        }
+                    }
+
+                    @include screen(small) {
+                        white-space: nowrap;
+                        width: 92%;
+                        font-size: 13px;
+                        padding-left: 2px;
+                        padding-right:2px;
+                    }
+                }
             }
         }
     }
